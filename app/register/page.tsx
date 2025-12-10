@@ -1,3 +1,5 @@
+'uesr client';
+
 import React, { useEffect } from 'react';
 
 const Page = () => {
