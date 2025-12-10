@@ -20,7 +20,7 @@ const Page = () => {
                 const profile = await liff.getProfile();
                 alert('Hello, ' + profile.displayName);
 
-                redirect('/rich-menu/menu', RedirectType.push);
+                redirect('/menu', RedirectType.push);
             }).catch((err) => {
                 alert('LIFF initialization failed: ' + JSON.stringify(err));
             })
