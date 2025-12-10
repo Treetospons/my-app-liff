@@ -2,6 +2,7 @@
 
 import React, { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
+import { liff } from '@line/liff';
 
 const Page = () => {
     const router = useRouter();
@@ -12,10 +13,10 @@ const Page = () => {
 
         const liffinit = async () => {
             try {
-                const liffModule = await import('@line/liff');
-                // `@line/liff` may export `liff` as a named export or default; normalize it
-                // eslint-disable-next-line @typescript-eslint/no-explicit-any
-                const liff: any = (liffModule && (liffModule.liff || liffModule.default)) || liffModule;
+                // const liffModule = await import('@line/liff');
+                // // `@line/liff` may export `liff` as a named export or default; normalize it
+                // // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                // const liff: any = (liffModule && (liffModule.liff || liffModule.default)) || liffModule;
 
                 const liffId = '2008669868-BqGZKXQK';
                 await liff.init({ liffId });

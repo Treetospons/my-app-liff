@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useEffect } from 'react';
+import { liff } from '@line/liff';
 
 const Page = () => {
   useEffect(() => {
@@ -9,10 +10,10 @@ const Page = () => {
 
     const liffinit = async () => {
       try {
-        const liffModule = await import('@line/liff');
-        // `@line/liff` may export `liff` as a named export or default; normalize it
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        const liff: any = (liffModule && (liffModule.liff || liffModule.default)) || liffModule;
+        // const liffModule = await import('@line/liff');
+        // // `@line/liff` may export `liff` as a named export or default; normalize it
+        // // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        // const liff: any = (liffModule && (liffModule.liff || liffModule.default)) || liffModule;
 
         const liffId = '2008669868-AErVyB8y';
         await liff.init({ liffId });
