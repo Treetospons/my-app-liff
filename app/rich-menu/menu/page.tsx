@@ -8,7 +8,7 @@ const Page = () => {
     {
       id: 1,
       title: 'register',
-      redirect: '/register'
+      redirect: 'https://liff.line.me/2008669868-AErVyB8y'
     },
     {
       id: 2,
